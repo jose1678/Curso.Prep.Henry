@@ -1,14 +1,14 @@
 // En estas primeras 6 preguntas, reemplaza `null` por la respuesta
 
 // Crea una variable "string", puede contener lo que quieras:
-const nuevaString = 'hola';
+const nuevaString = 'Hola';
 
 // Crea una variable numérica, puede ser cualquier número:
-const nuevoNum = 1451;
+const nuevoNum = 6;
 
 
 // Crea una variable booleana:
-const nuevoBool = 15>6;
+const nuevoBool = true;
 
 // Resuelve el siguiente problema matemático:
 const nuevaResta = 10 - 5 === 5;
@@ -17,7 +17,7 @@ const nuevaResta = 10 - 5 === 5;
 const nuevaMultiplicacion = 10 * 4 === 40 ;
 
 // Resuelve el siguiente problema matemático:
-const nuevoModulo = 21 % 5 === 1.05; 
+const nuevoModulo = 21 % 5 === 1; 
 
 
 // En los próximos 22 problemas, deberás completar la función.
@@ -61,9 +61,10 @@ function sonIguales(x, y) {
   // Devuelve "true" si "x" e "y" son iguales
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (x===y){ 
+  if (x === y) { 
 return true;
-  }else {return false;
+  } else {
+    return false;
   }
 }
 
@@ -79,10 +80,11 @@ function menosQueNoventa(num) {
   // Devuelve "true" si el argumento de la función "num" es menor que noventa
   // De lo contrario, devuelve "false"
   // Tu código:
-  if(num < 90){
+  if(num < 90) {
     return true;
-} else {return false;
-}
+  } else {
+  return false;
+  }
 }
 function mayorQueCincuenta(num) {
   // Devuelve "true" si el argumento de la función "num" es mayor que cincuenta
@@ -101,19 +103,19 @@ function esPar(num) {
   // Devuelve "true" si "num" es par
   // De lo contrario, devuelve "false"
   // Tu código:
-  if(num % 2===0)
-  {return true;
-}else {
+  if( num % 2 === 0) {
+  return true;
+  } else {
   return false;
+  }
 }
-
 function esImpar(num) {
   // Devuelve "true" si "num" es impar
   // De lo contrario, devuelve "false"
   // Tu código:
-  if(num % 2 ===1){
+  if(num % 2 === 1) {
     return true;
-   }else {
+   } else {
     return false;
    }
 }
@@ -122,7 +124,7 @@ function elevarAlCuadrado(num) {
   // Devuelve el valor de "num" elevado al cuadrado
   // ojo: No es raiz cuadrada!
   // Tu código:
-  return Math.Pow(num, 2);
+  return Math.pow(num, 2);
 }
 
 function elevarAlCubo(num) {
@@ -140,6 +142,13 @@ function elevar(num, exponent) {
 function redondearNumero(num) {
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
+  // var resto = num % 1;
+  // var entero = num - resto;
+  // if (resto >= 0.5) {
+  //   return entero + 1;
+  // } else {
+  //   return entero;
+  // }
   return Math.round(num);
 }
 
@@ -153,18 +162,20 @@ function numeroRandom() {
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
  return Math.random();
+}
 
 function esPositivo(numero) {
   //La función va a recibir un entero. Devuelve como resultado una cadena de texto que indica si el número es positivo o negativo. 
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
-  if(num ===0) {
+  if(numero === 0) {
     return false;
   }
-  else if(num>0){
+  else if(numero > 0) {
     return "Es positivo";
-  } else {
+  } 
+  else {
     return "Es negativo";
   }
 }
@@ -174,6 +185,7 @@ function agregarSimboloExclamacion(str) {
   // Ejemplo: "hello world" pasaría a ser "hello world!"
   // Tu código:
  return str + '!';
+}
 
 function combinarNombres(nombre, apellido) {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
@@ -187,7 +199,7 @@ function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  return 'hola ' + nombre + '!';
+  return 'Hola ' + nombre + '!';
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
@@ -225,7 +237,7 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
-  if( letra.length > 1){
+  if(letra.length > 1){
     return "Dato incorrecto"
   }
   if(letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u"){
@@ -273,4 +285,4 @@ module.exports = {
   areaDelTriangulo,
   deEuroAdolar,
   esVocal,
-};
+}    
